@@ -2,12 +2,12 @@
 
 底层使用TypeScript重写，某些内部功能分解为单独的包，隔离复杂性，方便社区开发贡献
 
-packages
-└── observer
-└── renderer-dom
-└── renderer-server
-└── scheduler
-└── vue
+packages  
+└── observer  
+└── renderer-dom  
+└── renderer-server  
+└── scheduler  
+└── vue  
 
 ### 基于Proxy监测机制
 
@@ -17,9 +17,13 @@ packages
 2、 数组基于下标的修改，对于.length修改的监测；  
 3、 对Map、Set、WeakMap和WeakSet的支持；  
 
-### 公开的用于创建observable的API: 提供轻量级、简单的跨组件状态管理解决方案  
+### 公开的用于创建observable的API
 
-###  惰性监测（Lazy Observation）：只有应用初始可见部分所用到的数据会被监测  
+提供轻量级、简单的跨组件状态管理解决方案 
+
+###  惰性监测（Lazy Observation）
+
+只有应用初始可见部分所用到的数据会被监测  
 
 ### 更精准的变动通知
 
@@ -35,7 +39,7 @@ packages
 
 ### 编译器
 
-tree-shaking输出优化，模版中的可选特性在生成代码中通过ES模块语法导入，从而未使用到的可选特性会被“摇掉”
+tree-shaking输出优化: 模版中的可选特性在生成代码中通过ES模块语法导入，从而未使用到的可选特性会被“摇掉”
 
 AOT优化、更良好的解析错误、支持source map
 
