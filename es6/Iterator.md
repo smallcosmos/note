@@ -79,7 +79,7 @@ const obj = {
             next: function () {
                 return {
                     value: 1,
-                    done: true
+                    done: false
                 };
             }
         };
