@@ -1,4 +1,4 @@
-### Iterator
+### 迭代器Iterator
 
 一种遍历集合的机制，集合是指Array、Object、Map、Set等；  
 它是一种接口，为各种不同的数据结构提供统一的访问机制
@@ -34,7 +34,7 @@ var iterator = a[Symbol.iterator]();
 iterator.next() // console {value: 1, done: false}
 iterator.next() // console {value: 2, done: false}
 iterator.next() // console {value: 3, done: false}
-iterator.next() // console {value: undefined, donw: true}
+iterator.next() // console {value: undefined, done: true}
 ```
 
 **for...of原理**
