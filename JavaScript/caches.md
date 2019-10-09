@@ -80,6 +80,8 @@ Request {
 
 **访问缓存Response数据**
 
+使用cache.match
+
 ```
 caches.open('test').then(function(cache) {
     cache.match('/page/1').then(function(matchedResponse) {
