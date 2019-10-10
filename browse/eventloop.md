@@ -1,21 +1,21 @@
-### Event Loops
+# Event Loops
 
-[事件循环规范](https://html.spec.whatwg.org/multipage/webappapis.html#event-loops)
+[事件循环规范](https://html.spec.whatwg.org/multipage/webappapis.html#event-loops)  
 [node.js Event Loop](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
 
-##### chrome浏览器进程
+### chrome浏览器进程
 
 1、Browse进程：浏览器的主进程，负责协调管理  
 2、第三方插件进程  
 3、GPU进程  
 4、Render进程：拥有多个线程，GUI渲染线程、JavaScript引擎线程、事件触发线程、定时器线程、异步请求线程  
 
-##### 调用栈
+### 调用栈
 
 存储有关正在运行的子程序的消息的栈；  
 在调用任何子程序时，主程序都必须暂存子程序运行完毕后应该返回到的地址，因此需要调用栈来存储相关信息，遵循后进先出的原则。
 
-##### WebAPI
+### WebAPI
 
 JavaScript引擎将代码从头执行到尾，不断的进行压栈和出栈操作。除了ECMAScript语法组成的代码之外，还有三种WebAPI：
 
@@ -25,7 +25,7 @@ DOM事件
 
 在执行以上三种WebAPI时，JavaScript引擎是无法将其押入调用栈的，因为JavaScript引擎无法原地等待，因此必须另开线程来处理，它们分别是异步HTTP请求线程，定时器线程、事件触发线程；  
 
-##### 任务队列
+### 任务队列
 
 以上WebAPI的线程处理完之后的回调仍需要JavaScript引擎来执行，它们之间通过任务队列（TaskQueue）来通信。任务队列遵从先进先出的原则。同时不同的任务有不同的优先级，分为宏任务(Macro task)和微任务(Micro task)，遵循一套事件循环的机制不断循环进行。  
 
@@ -34,7 +34,7 @@ DOM事件
 **任务源：**任务源在标准中用于分离逻辑上不同类型的任务，任务队列用于合并给定事件循环中的任务源。  
 例如，用户代理可以有一个用于鼠标和键事件的任务队列（与用户交互任务源关联）和另一个任务队列（与所有其他任务源关联）。然后，使用事件循环处理模型的初始步骤中授予的自由度，它可以在四分之三的时间内给予键盘和鼠标事件相对于其他任务的优先权，保持界面响应，但不会使其他任务队列感到饥饿。
 
-##### 事件循环
+### 事件循环
 
 事件循环分为窗口【window】事件循环和工作【worker】事件循环，规范如下：  
 A window event loop is the event loop used by similar-origin window agents. User agents may share an event loop across similar-origin window agents.  
@@ -93,13 +93,13 @@ A worklet event loop is the event loop used by worklet agents.
 
 一般来说，js脚本执行完之后会立即清空一次微任务，有种说法认为js脚本也被认为是一个最初的宏任务【可以这么简单去理解】；也有说法认为当前执行栈执行完毕时会立刻先处理所有微任务队列中的事件【该说法更符合规范，因为规范中并没有提到js脚本会被放到任务队列中，反而js脚本一开始就是被放入执行栈中执行】
 
-##### Macrotask & Microtask
+### Macrotask & Microtask
 
 宏任务： setTimeout、setInterval、setImmediate、I/O、DOM事件回调  
 微任务： Promise、MutatuibObserver、process.nextTick  
 
 
-### Node Event Loop
+# Node Event Loop
 
 1. timers: 执行定时器队列中的回调,如setTimeout() 和 setInterval()  
 2. I/O callbacks: 这个阶段执行几乎所有的回调。但是不包括close事件，定时器和setImmediate()的回调  
@@ -108,7 +108,7 @@ A worklet event loop is the event loop used by worklet agents.
 5. check: setImmediate()的回调会在这个阶段执行  
 6. close callbacks: socket.on('close', ...)这种close事件的回调  
 
-##### poll阶段详解
+### poll阶段详解
 
 如果poll队列不为空，Event Loop 将同步的执行poll queue里的callback，直到queue为空；  
 在poll阶段的空闲状态，会检查setImmediate queue中是否有callback，有的话会进入check阶段并执行；  
@@ -145,20 +145,20 @@ fs.readFile(__filename, () => {
 });
 ```
 
-##### I/O callbacks
+### I/O callbacks
 
 大部分的回调在poll阶段执行的, I/O callbacks阶段一般执行的是系统操作的回调
 
-##### process.nextTick()
+### process.nextTick()
 
 node中存在着一个特殊的队列，即nextTick queue;  
 这个队列中的回调执行虽然没有被表示为一个阶段，当时这些事件却会在每一个阶段执行完毕准备进入下一个阶段时优先执行;  
 当事件循环准备进入下一个阶段之前，会先检查nextTick queue中是否有任务，如果有，那么会先清空这个队列  
 
-##### setTimeout()
+### setTimeout()
 
 node会在timers阶段第一时间去执行执行定时器指定时间间隔后所设定的任务
 
-##### setImmediate()
+### setImmediate()
 
 在check阶段执行回调
