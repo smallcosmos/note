@@ -1,18 +1,18 @@
 # 前端单测
 
 ## 前言
-在jest官网可以看到对jest特性的全面介绍
-[https://jestjs.io/docs/en/getting-started](https://jestjs.io/docs/en/getting-started)
-jest配置相关可直接查阅jest配置
-[https://jestjs.io/docs/en/configuration](https://jestjs.io/docs/en/configuration)
-jest中如何集成webpack类似的功能可直接查阅
-[https://jestjs.io/docs/en/webpack](https://jestjs.io/docs/en/webpack)
-jest测试vue文件如何配置可查阅
-[https://alexjover.com/blog/write-the-first-vue-js-component-unit-test-in-jest/](https://alexjover.com/blog/write-the-first-vue-js-component-unit-test-in-jest/)
-jest针对vue的组件测试通用库【@vue/test-utils】使用及API可查阅
-[https://vue-test-utils.vuejs.org](https://vue-test-utils.vuejs.org)
-#### 在以下仓库代码中可以找到Jest各种单测实践、测试的重心以及各种单测的写法；
-复合组件包【业务代码已省略】
+在jest官网可以看到对jest特性的全面介绍  
+[https://jestjs.io/docs/en/getting-started](https://jestjs.io/docs/en/getting-started)  
+jest配置相关可直接查阅jest配置  
+[https://jestjs.io/docs/en/configuration](https://jestjs.io/docs/en/configuration)  
+jest中如何集成webpack类似的功能可直接查阅  
+[https://jestjs.io/docs/en/webpack](https://jestjs.io/docs/en/webpack)  
+jest测试vue文件如何配置可查阅  
+[https://alexjover.com/blog/write-the-first-vue-js-component-unit-test-in-jest/](https://alexjover.com/blog/write-the-first-vue-js-component-unit-test-in-jest/)  
+jest针对vue的组件测试通用库【@vue/test-utils】使用及API可查阅  
+[https://vue-test-utils.vuejs.org](https://vue-test-utils.vuejs.org)  
+#### 在以下仓库代码中可以找到Jest各种单测实践、测试的重心以及各种单测的写法；  
+复合组件包【业务代码已省略】  
 
 # 一、 三大组成：测试框架、断言库以及代码覆盖率工具
 ### 1、测试框架
