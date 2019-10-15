@@ -12,7 +12,7 @@
  - 如果设置了Cache-Control的max-age，则Expires被忽略；  
  - max-age为相对时间，相对于请求返回时间
 
-![Cache-Control设置原则](https://haitao.nos.netease.com/a23444f8-eb0b-4528-b869-3668bf217160_820_739.webp)
+![Cache-Control设置原则](https://haitao.nos.netease.com/5b9c52f0-91b2-4205-96ad-7fbb45a01bb0_752_676.png)
 
 **Note:** Expires 是http1.0的产物，Cache-Control是http1.1的产物，所以Expires其实是过时的产物，现阶段它的存在只是一种兼容性的写法
 
