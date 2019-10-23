@@ -4,7 +4,7 @@
 
 # Manual Deploy
 
-[![Deploy with ZEIT Now](https://zeit.co/button)]()
+[![Deploy with ZEIT Now](https://zeit.co/button)](https://api.zeit.co/v1/integrations/deploy/QmZMtm3wHHw1TchesEg8bDKGruRnaMdLy2y9RjBD37TXqY/CJiE1ZfeKG)
 
 # Online Site
 
