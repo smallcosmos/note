@@ -65,6 +65,11 @@ module.exports = {
             }
         ],
         sidebar: false,
-        lastUpdated: 'Last Updated'
+        lastUpdated: 'Last Updated',
+        repo: 'smallcosmos/note',
+        repoLabel: 'GitHub',
+        docsDir: 'docs',
+        editLinks: true,
+        editLinkText: '帮助我改进页面内容！'
     }
 }
