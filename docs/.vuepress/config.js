@@ -1,6 +1,7 @@
 module.exports = {
     title: 'Note',
     description: 'My Daily Note',
+    dest: './public',
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },
