@@ -5,20 +5,7 @@ module.exports = {
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },
-            {
-                text: 'Javascript',
-                items: [
-                    {text: 'new', link: '/javascript/new'},
-                    {text: '记忆函数', link: '/javascript/记忆函数'},
-                    {text: '块级作用域', link: '/javascript/块级作用域'},
-                    {text: 'window.caches', link: '/javascript/caches'},
-                    {text: 'CORS', link: '/javascript/cors'},
-                    {text: 'async&await', link: '/javascript/async&await'},
-                    {text: 'generator', link: '/javascript/generator'},
-                    {text: 'iterator', link: '/javascript/Iterator'},
-                    {text: 'promise', link: '/javascript/promise'}
-                ]
-            },
+            { text: 'Javascript', link: '/javascript/new'},
             {
                 text: 'Vue',
                 items: [
@@ -65,7 +52,19 @@ module.exports = {
                 ]
             }
         ],
-        sidebar: false,
+        sidebar: {
+            '/javascript/': [
+                ['new', 'new'],
+                ['记忆函数', '记忆函数'],
+                ['块级作用域', '块级作用域'],
+                ['caches', 'window.caches'],
+                ['cors', 'CORS'],
+                ['async&await', 'async&await'],
+                ['generator', 'generator'],
+                ['iterator', 'iterator'],
+                ['promise', 'promise']
+            ]
+        },
         lastUpdated: 'Last Updated',
         repo: 'smallcosmos/note',
         repoLabel: 'GitHub',
