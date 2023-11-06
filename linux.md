@@ -10,6 +10,13 @@
 4、查看内核日志， 比如排查linux内核oom killer日志。  
 ```dmesg```  
 
+5、启动mysql  
+```
+service mysql start  
+service mysql stop
+service mysql restart
+```  
+
 ## 问题排查
 
 #### Q：使用腾讯轻服务器2m内存会遇到内存不足关键进程被杀的case。  
